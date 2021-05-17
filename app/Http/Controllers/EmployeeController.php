@@ -10,7 +10,8 @@ class EmployeeController extends Controller
 {
 
     public function index() {
-        $employees = Employee::all();
+        
+        $employees = Employee::all();        
         $jobs = Job::all();
         $pageContent = 'Llista de Empleats';
         return view('employee.index', compact('pageContent', 'employees', 'jobs'));

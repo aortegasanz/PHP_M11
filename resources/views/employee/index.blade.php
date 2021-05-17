@@ -32,6 +32,8 @@
             </div>            
         </form>
         <br/>
+        <a class="btn btn-primary" href="{{ route('employee.create') }}">Nou Empleat</a>
+        <br/><br/>
         @if (isset($employees))
             <table class="table">
                 <tr>
@@ -48,8 +50,7 @@
                     <td>{{ $employee->surname }}</td>
                     <td>{{ $employee->job->name }}</td>
                     <td>
-                        <!-- ok --><a href="{{ route('employee.show', $employee->id) }}"><i class="far fa-eye"></i></a>  
-                        <!-- ok --><a href="{{ route('employee.create') }}"><i class="fas fa-plus-square"></i></i></a>
+                        <a href="{{ route('employee.show', $employee->id) }}"><i class="far fa-eye"></i></a>
                         <a href="{{ route('employee.edit', $employee->id) }}"><i class="fas fa-edit"></i></a> 
                         <form action="{{ route('employee.delete', $employee->id) }}" method="POST">
                             @csrf

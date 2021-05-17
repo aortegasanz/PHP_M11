@@ -32,7 +32,7 @@ class AuthController extends Controller
     }
 
     public function authRegister (Request $request) {
-        return view('home', ['register' => 'El usuari '.$request->email.' ha sigut creat correctament.']);
+        return view('home', ['register' => 'El usuari <strong>'.$request->email.'</strong> ha sigut creat correctament.']);
     }
 
     public function logout () {

@@ -4,6 +4,7 @@
         <h1>Registre</h1>
         <br/>
         <form class="form-control" action="{{ route('register') }}" method="POST">
+            @csrf
             <div class="form-group">
                 <label for="email">Correu electrònic</label>
                 <input class="form-control" type="mail" name="email" required/>

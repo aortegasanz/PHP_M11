@@ -21,13 +21,13 @@ Route::get('/', function () {
 });
 
 
-Route::get   ('employee/list',      [EmployeeController::class, 'index'] )->name('employee.list');    /* */
+Route::get   ('employee/list',      [EmployeeController::class, 'index'] )->name('employee.list');    
 
-Route::get   ('employee/show/{id}', [EmployeeController::class, 'show']  )->name('employee.show');    /* */
-Route::get   ('employee/create',    [EmployeeController::class, 'create'])->name('employee.create');  /* */
-Route::get   ('employee/edit/{id}', [EmployeeController::class, 'edit']  )->name('employee.edit');    /* */
-Route::put   ('employee/store',     [EmployeeController::class, 'store'] )->name('employee.store');   /* */
-Route::delete('employee/delete',    [EmployeeController::class, 'delete'])->name('employee.delete');  /* */
+Route::get   ('employee/show/{id}', [EmployeeController::class, 'show']  )->name('employee.show');    
+Route::get   ('employee/create',    [EmployeeController::class, 'create'])->name('employee.create');  
+Route::get   ('employee/edit/{id}', [EmployeeController::class, 'edit']  )->name('employee.edit');    
+Route::put   ('employee/store',     [EmployeeController::class, 'store'] )->name('employee.store');   
+Route::delete('employee/delete',    [EmployeeController::class, 'delete'])->name('employee.delete');  
 
 Route::get   ('job/list',           [JobController::class, 'index'] )->name('job.list');
 
